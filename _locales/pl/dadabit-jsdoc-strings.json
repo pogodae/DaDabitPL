@@ -1,5 +1,5 @@
 {
-	"dadabit.dadabit_init": "Inicjalizacja płytki DaDabit — uruchom przy starcie programu",
+	"dadabit.dadabit_init": "Inicjalizacja DaDabit — uruchom przy starcie programu",
 	"dadabit.setServo": "Ustaw kąt serwomechanizmu nr 1 lub 2, zakres kąta: 0~180",
 	"dadabit.setBusServo": "Ustaw kąt serwomechanizmu magistrali nr 1 lub 2, zakres kąta: 0~240",
 	"dadabit.setMotorSpeed": "Ustaw prędkość silnika 1 i silnika 2, zakres: -100 do 100. Steruje jazdą i skręcaniem pojazdu gąsienicowego",
