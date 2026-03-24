@@ -31,7 +31,7 @@
 	"dadabit.Temp_humi.Temperature|block": "temperatura",
 	"dadabit.Temp_humi.Humidity|block": "wilgotność",
 	"dadabit.Oriention.Clockwise|block": "zgodnie z ruchem zegara",
-	"dadabit.Oriention.Counterclockwise|block": "przeciwnie do ruchu zegara",
+	"dadabit.Oriention.Counterclockwise|block": "przeciwnie do ruchem zegara",
 	"dadabit.getRainWater|block": "Pobierz wartość czujnika deszczu",
 	"dadabit.getBrightness|block": "Pobierz wartość czujnika światła",
 	"dadabit.getSoilMoisture|block": "Pobierz wartość czujnika wilgotności gleby",
