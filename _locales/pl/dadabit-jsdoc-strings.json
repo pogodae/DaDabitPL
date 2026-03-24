@@ -1,0 +1,13 @@
+{
+	"dadabit.dadabit_init": "Inicjalizacja płytki DaDabit — uruchom przy starcie programu",
+	"dadabit.setServo": "Ustaw kąt serwomechanizmu nr 1 lub 2, zakres kąta: 0~180",
+	"dadabit.setBusServo": "Ustaw kąt serwomechanizmu magistrali nr 1 lub 2, zakres kąta: 0~240",
+	"dadabit.setMotorSpeed": "Ustaw prędkość silnika 1 i silnika 2, zakres: -100 do 100. Steruje jazdą i skręcaniem pojazdu gąsienicowego",
+	"dadabit.Ultrasonic": "Pobierz odległość do przeszkody wykrytej przez czujnik ultradźwiękowy",
+	"dadabit.getSoundVolume": "Pobierz poziom głośności wykryty przez czujnik dźwięku, zakres: 0 do 255",
+	"dadabit.readLineFollowerStatus": "Pobierz stan czujnika śledzenia linii",
+	"dadabit.setPixelRGB": "Ustaw kolor diody LED — po ustawieniu wykonaj blok 'Pokaż diody LED'",
+	"dadabit.setPixelRGBArgs": "Ustaw kolor diody LED podając numer: 1-czerwony, 2-pomarańczowy, 3-żółty, 4-zielony, 5-niebieski, 6-indygo, 7-fioletowy, 8-purpurowy, 9-biały — po ustawieniu wykonaj blok 'Pokaż diody LED'",
+	"dadabit.showLight": "Wyświetl diody LED — używaj razem z blokiem ustawiania koloru. Po ustawieniu koloru musisz wykonać ten blok",
+	"dadabit.clearLight": "Wyczyść kolory diod LED i wyłącz je"
+}

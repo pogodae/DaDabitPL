@@ -13,7 +13,9 @@
         "RGBLight.ts",
         "sendbuffer.asm",
         "_locales/zh/dadabit-strings.json",
-        "_locales/zh/dadabit-jsdoc-strings.json"
+        "_locales/zh/dadabit-jsdoc-strings.json",
+        "_locales/pl/dadabit-strings.json",
+        "_locales/pl/dadabit-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
