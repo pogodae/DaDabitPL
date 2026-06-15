@@ -5,7 +5,7 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "WonderCam": "github:Hiwonder/WonderCam"
+        "WonderCam": "github:pogodae/WonderCam"
     },
     "files": [
         "README.md",
