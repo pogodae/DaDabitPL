@@ -114,6 +114,7 @@ namespace dadabit {
     export function dadabit_init() {
         // initColorSensor();
         initBoardRGBLight();
+        dadabit_MP3_VOL(20);
         serial.redirect(
             SerialPin.P12,
             SerialPin.P8,
@@ -1188,16 +1189,12 @@ namespace dadabit {
         return value;
     }
 
-    function WireWriteDataArray(addr: number, reg: number, val: number): boolean {
+    function WireWriteDataArray(addr: number, reg: number, val: number): void {
         let buf = pins.createBuffer(3);
         buf[0] = reg;
         buf[1] = val & 0xff;
         buf[2] = (val >> 8) & 0xff;
-        let rvalue = pins.i2cWriteBuffer(addr, buf);
-        if (rvalue != 0) {
-            return false;
-        }
-        return true;
+        pins.i2cWriteBuffer(addr, buf);
     }
 
     //% weight=88 blockId=dadabit_MP3_VOL block="MP3 volume |%value"
