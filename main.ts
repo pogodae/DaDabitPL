@@ -6,26 +6,26 @@ const MP3_I2C_ADDR = 0x7B;
 const MP3_PLAY_NUM_ADDR = 1;
 const MP3_VOL_VALUE_ADDR = 12;
 
-export enum dadabit_mp3button {
-    //% block="PLAY"
-    PLAY = 5,
-    //% block="PAUSE"
-    PAUSE = 6,
-    //% block="PREV"
-    PREV = 8,
-    //% block="NEXT"
-    NEXT = 9
-}
-
-export enum dadabit_mp3Loop {
-    //% block="ON"
-    ON = 13,
-    //% block="OFF"
-    OFF = 14
-}
-
 //% weight=10 icon="\uf013" color=#ff7f00
 namespace dadabit {
+
+    export enum dadabit_mp3button {
+        //% block="PLAY"
+        PLAY = 5,
+        //% block="PAUSE"
+        PAUSE = 6,
+        //% block="PREV"
+        PREV = 8,
+        //% block="NEXT"
+        NEXT = 9
+    }
+
+    export enum dadabit_mp3Loop {
+        //% block="ON"
+        ON = 13,
+        //% block="OFF"
+        OFF = 14
+    }
     export enum Lights {
         //% block="Light 1"
         Light1 = 0x0,
