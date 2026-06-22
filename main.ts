@@ -114,7 +114,6 @@ namespace dadabit {
     export function dadabit_init() {
         // initColorSensor();
         initBoardRGBLight();
-        dadabit_MP3_VOL(20);
         serial.redirect(
             SerialPin.P12,
             SerialPin.P8,
@@ -1224,6 +1223,8 @@ namespace dadabit {
         WireWriteDataArray(MP3_I2C_ADDR, state, 0);
         basic.pause(20);
     }
+
+    dadabit_MP3_VOL(20);
 
     function removeValueFromBuffer(buf: Buffer, value: number): Buffer {
         let count = 0;
