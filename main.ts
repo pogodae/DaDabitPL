@@ -4,30 +4,24 @@
 
 const MP3_I2C_ADDR = 0x7B;
 const MP3_PLAY_NUM_ADDR = 1;
-const MP3_PLAY_ADDR = 5;
-const MP3_PAUSE_ADDR = 6;
-const MP3_PREV_ADDR = 8;
-const MP3_NEXT_ADDR = 9;
 const MP3_VOL_VALUE_ADDR = 12;
-const MP3_SINGLE_LOOP_ON_ADDR = 13;
-const MP3_SINGLE_LOOP_OFF_ADDR = 14;
 
 export enum dadabit_mp3button {
     //% block="PLAY"
-    PLAY = MP3_PLAY_ADDR,
+    PLAY = 5,
     //% block="PAUSE"
-    PAUSE = MP3_PAUSE_ADDR,
+    PAUSE = 6,
     //% block="PREV"
-    PREV = MP3_PREV_ADDR,
+    PREV = 8,
     //% block="NEXT"
-    NEXT = MP3_NEXT_ADDR
+    NEXT = 9
 }
 
 export enum dadabit_mp3Loop {
     //% block="ON"
-    ON = MP3_SINGLE_LOOP_ON_ADDR,
+    ON = 13,
     //% block="OFF"
-    OFF = MP3_SINGLE_LOOP_OFF_ADDR
+    OFF = 14
 }
 
 //% weight=10 icon="\uf013" color=#ff7f00
