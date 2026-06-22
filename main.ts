@@ -2,12 +2,12 @@
  dadabit package
 */
 
-const MP3_I2C_ADDR = 0x7B;
-const MP3_PLAY_NUM_ADDR = 1;
-const MP3_VOL_VALUE_ADDR = 12;
-
 //% weight=10 icon="\uf013" color=#ff7f00
 namespace dadabit {
+
+    const MP3_I2C_ADDR = 0x7B;
+    const MP3_PLAY_NUM_ADDR = 1;
+    const MP3_VOL_VALUE_ADDR = 12;
 
     export enum dadabit_mp3button {
         //% block="PLAY"
