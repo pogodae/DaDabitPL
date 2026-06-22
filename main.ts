@@ -1,6 +1,35 @@
 /*
  dadabit package
 */
+
+const MP3_I2C_ADDR = 0x7B;
+const MP3_PLAY_NUM_ADDR = 1;
+const MP3_PLAY_ADDR = 5;
+const MP3_PAUSE_ADDR = 6;
+const MP3_PREV_ADDR = 8;
+const MP3_NEXT_ADDR = 9;
+const MP3_VOL_VALUE_ADDR = 12;
+const MP3_SINGLE_LOOP_ON_ADDR = 13;
+const MP3_SINGLE_LOOP_OFF_ADDR = 14;
+
+export enum dadabit_mp3button {
+    //% block="PLAY"
+    PLAY = MP3_PLAY_ADDR,
+    //% block="PAUSE"
+    PAUSE = MP3_PAUSE_ADDR,
+    //% block="PREV"
+    PREV = MP3_PREV_ADDR,
+    //% block="NEXT"
+    NEXT = MP3_NEXT_ADDR
+}
+
+export enum dadabit_mp3Loop {
+    //% block="ON"
+    ON = MP3_SINGLE_LOOP_ON_ADDR,
+    //% block="OFF"
+    OFF = MP3_SINGLE_LOOP_OFF_ADDR
+}
+
 //% weight=10 icon="\uf013" color=#ff7f00
 namespace dadabit {
     export enum Lights {
@@ -1163,6 +1192,46 @@ namespace dadabit {
         serial.writeString("data2:")
         serial.writeLine(value)
         return value;
+    }
+
+    function WireWriteDataArray(addr: number, reg: number, val: number): boolean {
+        let buf = pins.createBuffer(3);
+        buf[0] = reg;
+        buf[1] = val & 0xff;
+        buf[2] = (val >> 8) & 0xff;
+        let rvalue = pins.i2cWriteBuffer(addr, buf);
+        if (rvalue != 0) {
+            return false;
+        }
+        return true;
+    }
+
+    //% weight=88 blockId=dadabit_MP3_VOL block="MP3 głośność |%value"
+    //% subcategory=Sensor
+    export function dadabit_MP3_VOL(value: number) {
+        WireWriteDataArray(MP3_I2C_ADDR, MP3_VOL_VALUE_ADDR, value);
+        basic.pause(20);
+    }
+
+    //% weight=87 blockId=dadabit_MP3_BUTTON block="MP3 |%button"
+    //% subcategory=Sensor
+    export function dadabit_MP3_BUTTON(button: dadabit_mp3button) {
+        WireWriteDataArray(MP3_I2C_ADDR, button, 0);
+        basic.pause(20);
+    }
+
+    //% weight=86 blockId=dadabit_MP3_PLAY_NUM block="MP3 graj utwór nr |%num"
+    //% subcategory=Sensor
+    export function dadabit_MP3_PLAY_NUM(num: number) {
+        WireWriteDataArray(MP3_I2C_ADDR, MP3_PLAY_NUM_ADDR, num);
+        basic.pause(20);
+    }
+
+    //% weight=85 blockId=dadabit_MP3_SINGLE_LOOP blockGap=50 block="MP3 pętla pojedyncza |%state"
+    //% subcategory=Sensor
+    export function dadabit_MP3_SINGLE_LOOP(state: dadabit_mp3Loop) {
+        WireWriteDataArray(MP3_I2C_ADDR, state, 0);
+        basic.pause(20);
     }
 
     function removeValueFromBuffer(buf: Buffer, value: number): Buffer {
