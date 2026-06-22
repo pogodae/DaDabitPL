@@ -1200,7 +1200,7 @@ namespace dadabit {
         return true;
     }
 
-    //% weight=88 blockId=dadabit_MP3_VOL block="MP3 głośność |%value"
+    //% weight=88 blockId=dadabit_MP3_VOL block="MP3 volume |%value"
     //% subcategory=Sensor
     export function dadabit_MP3_VOL(value: number) {
         WireWriteDataArray(MP3_I2C_ADDR, MP3_VOL_VALUE_ADDR, value);
@@ -1214,14 +1214,14 @@ namespace dadabit {
         basic.pause(20);
     }
 
-    //% weight=86 blockId=dadabit_MP3_PLAY_NUM block="MP3 graj utwór nr |%num"
+    //% weight=86 blockId=dadabit_MP3_PLAY_NUM block="MP3 play track |%num"
     //% subcategory=Sensor
     export function dadabit_MP3_PLAY_NUM(num: number) {
         WireWriteDataArray(MP3_I2C_ADDR, MP3_PLAY_NUM_ADDR, num);
         basic.pause(20);
     }
 
-    //% weight=85 blockId=dadabit_MP3_SINGLE_LOOP blockGap=50 block="MP3 pętla pojedyncza |%state"
+    //% weight=85 blockId=dadabit_MP3_SINGLE_LOOP blockGap=50 block="MP3 single loop |%state"
     //% subcategory=Sensor
     export function dadabit_MP3_SINGLE_LOOP(state: dadabit_mp3Loop) {
         WireWriteDataArray(MP3_I2C_ADDR, state, 0);

@@ -1,6 +1,6 @@
 {
     "name": "dadabit",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Extension for Hiwonder DaDabit",
     "license": "MIT",
     "dependencies": {
